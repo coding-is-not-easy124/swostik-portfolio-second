@@ -1,0 +1,86 @@
+.my-skills {
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.my-skills h1 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 40px;
+}
+
+.icons svg {
+  width: 200px;
+  height: 200px;
+  transition: transform 0.3s;
+  animation: float 3s ease-in-out infinite, rotate 6s linear infinite, scale 4s ease-in-out infinite, skew 8s ease-in-out infinite;
+}
+
+.icons svg:hover {
+  transform: scale(1.2);
+}
+
+.icons svg:hover {
+  transform: scale(1.2) rotate(10deg) translateY(-10px);
+  fill: black; 
+  animation: hoverFloat 0.5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes skew {
+  0%, 100% {
+    transform: skew(0deg);
+  }
+  50% {
+    transform: skew(10deg, 10deg);
+  }
+}
+
+@keyframes hoverFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+  
